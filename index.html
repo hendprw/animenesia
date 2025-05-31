@@ -1,13 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animenesia</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Komunitas Penggemar Anime Terbesar di Indonesia. Diskusi, Jejepangan, nobar, dan banyak kegiatan seru anime lainnya!" />
+  <meta name="keywords" content="anime, komunitas anime, fanart, nobar anime, AnimeNesia, anime Indonesia" />
+  <meta name="author" content="Animenesia Community" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Animenesia - Komunitas Anime Indonesia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#ffffff",
+            surface: "#f7f9f9",
+            accent: "#1DA1F2",
+            textLight: "#536471",
+            textDark: "#0f1419"
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <h1>Coming Soon</h1>
-  <h1>Coming Soon</h1>
-  <h1>Coming Soon</h1>
+<body class="bg-background text-textDark font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-surface shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-accent">Animenesia</h1>
+      <div class="space-x-4 hidden md:flex">
+        <a href="#aset" class="hover:text-accent">Aset Kami</a>
+        <a href="#brand" class="hover:text-accent">Brand</a>
+        <a href="#partner" class="hover:text-accent">Partner</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="pengenalan" class="relative bg-accent text-white text-center py-24">
+    <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('./bg.jpg');"></div>
+    <div class="relative z-10 max-w-3xl mx-auto px-4">
+      <h2 class="text-5xl font-bold mb-4">Selamat Datang di AnimeNesia!</h2>
+      <p class="text-lg text-white/90">Komunitas Penggemar Anime Terbesar di Indonesia</p>
+    </div>
+  </section>
+
+  <!-- Visi Misi -->
+  <section id="visi-misi" class="py-16 px-4 bg-surface">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-6 text-accent">Tentang Kami</h3>
+      <p class="mb-4 text-textLight">Animenesia adalah salah satu komunitas penggemar anime terbesar dan paling aktif di Indonesia. Kami berdedikasi untuk menjadi wadah yang inklusif bagi semua pecinta anime, baik pemula maupun yang sudah berpengalaman. Melalui berbagai kegiatan seperti diskusi, nonton bareng, dan event-event kreatif lainnya, Animenesia berupaya membangun suasana yang positif dan menyenangkan. Kami percaya bahwa anime bukan hanya hiburan, tapi juga medium untuk berbagi inspirasi, kreativitas, dan persahabatan. Bersama Animenesia, kamu tidak hanya menemukan teman baru dengan minat yang sama, tapi juga kesempatan untuk berkembang dan berkontribusi dalam komunitas anime dan industri kreatif Indonesia.</p>
+    </div>
+  </section>
+
+  <!-- Kegiatan Komunitas -->
+   <section id="kegiatan" class="py-16 px-4 bg-blue-900 text-white">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-semibold mb-10 text-center text-white-300">Kegiatan Komunitas</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-blue-800 p-6 rounded-lg shadow hover:shadow-xl transition-all">
+          <div class="mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles mx-auto"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+          </div>
+          <h4 class="text-xl font-bold mb-2 text-purple-200">Diskusi Anime Mingguan</h4>
+          <p>Berbagi teori dan opini tentang anime terbaru secara rutin.</p>
+        </div>
+        <div class="bg-blue-800 p-6 rounded-lg shadow hover:shadow-xl transition-all">
+          <div class="mb-4">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users mx-auto"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <h4 class="text-xl font-bold mb-2 text-purple-200">Event Organizer</h4>
+          <p>Menyelenggarkan event yang berhubungan dengan lingkup pop kultur Jejepangan</p>
+        </div>
+        <div class="bg-blue-800 p-6 rounded-lg shadow hover:shadow-xl transition-all">
+          <div class="mb-4">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ticket-percent-icon lucide-ticket-percent mx-auto"><path d="M2 9a3 3 0 1 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 1 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M9 9h.01"/><path d="m15 9-6 6"/><path d="M15 15h.01"/></svg>
+          </div>
+          <h4 class="text-xl font-bold mb-2 text-purple-200">Nonton Bareng</h4>
+          <p>Acara nobar anime secara online & offline untuk mempererat komunitas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section id="galeri" class="py-16 px-4 bg-surface">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-10 text-accent">Galeri Kegiatan</h3>
+      <div class="overflow-hidden relative">
+        <div id="galeri-container" class="flex gap-4 animate-scroll whitespace-nowrap">
+          <img src="./galeri1.jpg" class="galeri-img rounded shadow w-72 h-72 object-cover inline-block" />
+          <img src="./galeri2.jpg" class="galeri-img rounded shadow w-72 h-72 object-cover inline-block" />
+          <img src="./galeri3.jpg" class="galeri-img rounded shadow w-72 h-72 object-cover inline-block" />
+          <img src="./galeri4.jpg" class="galeri-img rounded shadow w-72 h-72 object-cover inline-block" />
+          <img src="./galeri5.jpg" class="galeri-img rounded shadow w-72 h-72 object-cover inline-block" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const container = document.getElementById('galeri-container');
+    const images = container.querySelectorAll('.galeri-img');
+    images.forEach(img => container.appendChild(img.cloneNode(true)));
+  </script>
+
+  <style>
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+      animation: scroll 20s linear infinite;
+    }
+  </style>
+
+  <!-- Aset Kami -->
+  <section id="aset" class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-10 text-accent">Aset / Unit Kami</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Gudangmovie_logo.png" class="h-16 mx-auto" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand -->
+  <section id="brand" class="py-16 px-4 bg-surface">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-6 text-accent">Brand yang Pernah Bekerja Sama</h3>
+      <div class="flex flex-wrap justify-center items-center gap-8">
+        <img src="https://kyou.id/static/img/branding.png" class="h-12" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/IQiyi_logo.svg/640px-IQiyi_logo.svg.png" class="h-12" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Crunchyroll_Logo.svg" class="h-12" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Netflix_logo.svg" class="h-12" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner -->
+  <section id="partner" class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-6 text-accent">Media Partner Kami</h3>
+      <div class="flex flex-wrap justify-center items-center gap-8">
+        <img src="https://comifuro.net/wp-content/uploads/2020/11/logocf.png" class="h-12"/>
+        <img src="./chibicon.png" class="h-12" style="width: 20%; height: auto;"/>
+        <img src="https://seputarotaku.com/storage/thumbnail/thumbnail_1690466281_1671122855233_8944534.png" class="h-10"/>
+        <img src="https://ugc.production.linktr.ee/9f981266-4a98-4cea-b538-4908920e34de_LOGO-HIMAJA-WHITE-BG.jpeg?io=true&size=avatar-v3_0" class="h-12"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-gray-200 text-textLight py-10">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <h4 class="text-accent font-bold mb-2">Tentang AnimeNesia</h4>
+        <p>AnimeNesia adalah komunitas pecinta anime di Indonesia yang berfokus pada diskusi, kreativitas, dan kebersamaan antar penggemar.</p>
+      </div>
+      <div>
+        <h4 class="text-accent font-bold mb-2">Navigasi Cepat</h4>
+        <ul class="space-y-1">
+          <li><a href="#pengenalan" class="hover:text-accent">Pengenalan</a></li>
+          <li><a href="#kegiatan" class="hover:text-accent">Kegiatan</a></li>
+          <li><a href="#galeri" class="hover:text-accent">Galeri</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-accent font-bold mb-2">Kontak Kami</h4>
+        <p>Email: info@animenesia.id</p>
+        <p>WhatsApp: +62 812-3456-7890</p>
+        <p>Instagram: @animenesia.id</p>
+      </div>
+      <div>
+        <h4 class="text-accent font-bold mb-2">Ikuti Kami</h4>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-accent">Twitter</a>
+          <a href="#" class="hover:text-accent">Instagram</a>
+          <a href="#" class="hover:text-accent">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-xs mt-8 text-gray-400">
+      © 2025 Animenesia. Semua Hak Dilindungi.
+    </div>
+  </footer>
+
 </body>
 </html>
