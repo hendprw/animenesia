@@ -42,6 +42,42 @@
     body.detail-page-open {
         overflow: hidden;
     }
+
+    /* ================================= */
+/* PARTNER CARD STYLES               */
+/* ================================= */
+.partner-card {
+    background-color: var(--tw-colors-surface);
+    border: 1px solid rgba(0, 229, 255, 0.1);
+}
+
+.partner-card:hover {
+    border-color: var(--tw-colors-accent);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.partner-card img {
+    filter: brightness(0.9) grayscale(0.5);
+    transition: filter 0.3s;
+}
+
+.partner-card:hover img {
+    filter: brightness(1) grayscale(0);
+}
+
+    /* ================================= */
+/* PARTNER DISPLAY CARD STYLES       */
+/* ================================= */
+#partner-logo-container,
+#partner-text-container {
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+#partner-display-card.partner-changing #partner-logo-container,
+#partner-display-card.partner-changing #partner-text-container {
+    opacity: 0;
+    transform: translateY(10px);
+}
     
     .section-anim {
       opacity: 0;
@@ -106,7 +142,7 @@
         text-shadow: 0 0 10px var(--tw-colors-accent), 0 0 25px var(--tw-colors-accent), 0 0 50px var(--tw-colors-accent2);
     }
     .hero-cta {
-        border: 2px solid var(--tw-colors-accent);
+        border: 1px solid #00E5FF;
         color: var(--tw-colors-accent);
         box-shadow: 0 0 10px var(--tw-colors-accent);
         transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
@@ -322,7 +358,7 @@
     .hud-card { background-color: var(--tw-colors-surface); border: 1px solid rgba(0, 229, 255, 0.3); }
     .hud-logo-wrapper { flex-shrink: 0; background-image: radial-gradient(circle, rgba(0, 229, 255, 0.05), transparent 60%); }
     .hud-status-value { color: var(--tw-colors-success); text-shadow: 0 0 5px var(--tw-colors-success); }
-    .hud-button { background-color: rgba(0, 229, 255, 0.1); border: 1px solid rgba(0, 229, 255, 0.3); color: var(--tw-colors-accent); transition: background-color 0.3s, color 0.3s; }
+    .hud-button { background-color: rgba(220, 225, 225, 0.1); border: 1px solid rgba(0, 229, 255, 0.3); color: var(--tw-colors-accent); transition: background-color 0.3s, color 0.3s; }
     .hud-button:hover { background-color: var(--tw-colors-accent); color: var(--tw-colors-background); box-shadow: 0 0 10px var(--tw-colors-accent); }
     .coming-soon-card { position: relative; text-align: center; padding: 4rem 2rem; background: radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.05), transparent 70%); }
     .coming-soon-card svg { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -335,7 +371,7 @@
     .hub-tab.active { background-color: rgba(0, 229, 255, 0.1); border-color: rgba(0, 229, 255, 0.3); color: white; }
     .hub-content { transition: opacity 0.4s ease-in-out; }
     .hub-content.hidden { display: none; }
-    .hub-connect-btn { background: linear-gradient(90deg, var(--tw-colors-accent), var(--tw-colors-accent2)); transition: transform 0.3s, box-shadow 0.3s; }
+    .hub-connect-btn { background-color: white; transition: transform 0.3s, box-shadow 0.3s; }
     .hub-connect-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--tw-colors-accent); }
     .gallery-track { animation: scroll 60s linear infinite; }
     @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -354,7 +390,7 @@
     <div id="loader-kinetic" class="kinetic-text-container">
         <div class="kinetic-word" id="kw1">KOMUNITAS</div>
         <div class="kinetic-word" id="kw2">ANIME</div>
-        <div class="kinetic-word" id="kw3">POP KULTUR</div>
+        <div class="kinetic-word" id="kw3">POPKULTUR</div>
         <div class="kinetic-word" id="kw4">INDONESIA</div>
     </div>
     
@@ -367,7 +403,7 @@
 </div>
 
 </div>
-  <a href="https://wa.me/6281234567890" target="_blank" class="fixed bottom-6 right-6 z-50 shadow-xl rounded-full bg-green-500 hover:bg-green-600 p-3 animate-bounce transition-all duration-300 hover:scale-110" aria-label="Hubungi via WhatsApp">
+  <a href="https://wa.me/6283139682650" target="_blank" class="fixed bottom-6 right-6 z-50 shadow-xl rounded-full bg-green-500 hover:bg-green-600 p-3 animate-bounce transition-all duration-300 hover:scale-110" aria-label="Hubungi via WhatsApp">
     <svg fill="white" viewBox="0 0 24 24" width="30" height="30"><path d="M12.04 2.002a10 10 0 0 0-8.714 14.979l-1.23 4.492 4.604-1.207a10.002 10.002 0 1 0 5.34-18.264zm.003 18.002a8.009 8.009 0 0 1-4.077-1.12l-.292-.173-2.733.717.73-2.672-.19-.278a8.01 8.01 0 1 1 6.562 3.526zm4.416-6.018c-.24-.12-1.413-.694-1.63-.773-.217-.08-.376-.12-.535.12-.16.24-.613.774-.75.934-.137.16-.28.18-.52.06-.24-.12-1.011-.372-1.927-1.188-.713-.635-1.195-1.416-1.336-1.655-.14-.24-.015-.37.106-.488.109-.108.24-.28.36-.418.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.535-1.292-.733-1.77-.193-.465-.388-.4-.535-.41l-.455-.008c-.16 0-.42.06-.64.28-.22.22-.837.818-.837 2.004 0 1.185.858 2.332.977 2.492.12.16 1.684 2.571 4.086 3.505.571.197 1.016.314 1.364.403.574.146 1.097.126 1.51.077.461-.056 1.413-.577 1.612-1.134.2-.558.2-1.036.14-1.134-.06-.097-.217-.156-.457-.276z"/></svg>
   </a>
 
@@ -411,8 +447,9 @@
           Gerbang Utama Komunitas Anime & Kultur Pop di Indonesia.
         </p>
         <p class="text-base text-textDark/80 mb-8 max-w-3xl mx-auto leading-relaxed section-anim">
-            <b>Animenesia</b> adalah komunitas penggemar anime terbesar dan paling aktif di Indonesia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae minus vero iure suscipit similique soluta quis pariatur molestias. Impedit voluptatem adipisci eveniet itaque amet animi voluptate reprehenderit similique ipsum dicta?
-        </p>
+  <b>Animenesia</b> adalah salah satu komunitas pop kultur terbesar di Indonesia yang berfokus pada dunia anime, manga, game, dan budaya pop secara umum. Didirikan oleh kaula muda pada 2018 silam dengan semangat yang tinggi, komunitas ini menjadi wadah bagi ribuan anggota dari berbagai daerah untuk berkumpul, berdiskusi, berkreasi, dan berbagi informasi seputar industri kreatif lokal hingga dunia.
+</p>
+
         <a href="#kegiatan" class="hero-cta font-display relative z-20 inline-block px-10 py-4 font-bold rounded-md text-lg">
           JELAJAHI
         </a>
@@ -464,12 +501,12 @@
             <div class="hud-card rounded-lg section-anim">
                 <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
                     <div class="w-48 h-48 md:w-56 md:h-56 rounded-full hud-logo-wrapper flex items-center justify-center p-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Gudangmovie_logo.png" class="h-16 md:h-20" alt="Otax Logo"/>
+                        <img src="https://b.top4top.io/p_34736dcq71.png" width="100px" height="auto"  alt="Otax Logo"/>
                     </div>
                     <div class="flex-1 text-center md:text-left">
-                        <h3 class="font-mono text-xl lg:text-2xl text-accent">// UNIT_01: OtaX Media</h3>
+                        <h3 class="font-mono text-xl lg:text-2xl text-accent">OtaX Media</h3>
                         <p class="mt-2 text-textLight text-lg leading-relaxed">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ducimus quam consectetur, officia laborum aspernatur beatae esse minus corporis provident, dolores nihil reprehenderit? Quia atque porro nesciunt sit similique cupiditate!
+                         OtaX Media merupakan sebuah media pemberitaan dan hiburan daring yang berfokus pada lingkup dunia Budaya Populer.  
                         </p>
                         <div class="border-t border-accent/20 my-4"></div>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
@@ -477,25 +514,56 @@
                                 <span class="hud-label text-textDark">STATUS: </span>
                                 <span class="hud-status-value font-bold">OPERATIONAL</span>
                             </div>
-                            <a href="#" class="hud-button font-mono font-bold py-2 px-4 rounded-md w-full sm:w-auto">[ ACCESS ARCHIVE ]</a>
+                            <a href="https://instagram.com/otaxmedia" class="hud-button font-mono font-bold py-2 px-4 rounded-md w-full sm:w-auto">[ ACCESS ARCHIVE ]</a>
                         </div>
                     </div>
                 </div>
             </div>
+            <br><br>
+             <div class="hud-card rounded-lg section-anim">
+                <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
+                    <div class="w-48 h-48 md:w-56 md:h-56 rounded-full hud-logo-wrapper flex items-center justify-center p-4">
+                        <img src="https://f.top4top.io/p_3473v4l6c1.png" width="100px" height="auto" alt="Otax Logo"/>
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="font-mono text-xl lg:text-2xl text-accent">Virtualnesia</h3>
+                        <p class="mt-2 text-textLight text-lg leading-relaxed">
+                           Virtualnesia merupakan media yang berfokus pada distribusi dan pemberitaan mengenai seluk-beluk dunia Virtual Youtuber global.
+                        </p>
+                        <div class="border-t border-accent/20 my-4"></div>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
+                            <div class="font-mono text-base">
+                                <span class="hud-label text-textDark">STATUS: </span>
+                                <span class="hud-status-value font-bold">OPERATIONAL</span>
+                            </div>
+                            <a href="https://instagram.com/virtualnesia.id" class="hud-button font-mono font-bold py-2 px-4 rounded-md w-full sm:w-auto">[ ACCESS ARCHIVE ]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <section id="partner" class="section-wrapper bg-background">
-        <div class="container mx-auto px-4 relative">
-            <div class="gfx-corners"><span></span></div>
-            <h2 class="section-title text-center font-display text-3xl sm:text-4xl font-bold">Brand & Media Partner</h2>
-            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-12">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/IQiyi_logo.svg/640px-IQiyi_logo.svg.png" class="partner-logo h-12" alt="IQiyi"/>
-              <img src="https://comifuro.net/wp-content/uploads/2020/11/logocf.png" class="partner-logo h-12" alt="Comifuro"/>
-              <img src="https://kyou.id/static/img/branding.png" class="partner-logo h-12" alt="Kyou ID"/>
+   <section id="partner" class="section-wrapper bg-surface">
+    <div class="container mx-auto px-4 relative">
+        <div class="gfx-corners"><span></span></div>
+        <h2 class="section-title text-center font-display text-3xl sm:text-4xl font-bold">Brand & Media Partner</h2>
+        
+        <div id="partner-display-card" class="hud-card rounded-lg section-anim max-w-2xl mx-auto">
+            <div class="flex flex-col sm:flex-row items-center gap-6 p-4 text-center sm:text-left">
+                <div id="partner-logo-container" class="w-32 h-32 flex-shrink-0 bg-black/20 rounded-md flex items-center justify-center p-3 transition-all duration-300">
+                    <img id="partner-logo" src="" class="max-w-full max-h-full" alt="Partner Logo"/>
+                </div>
+                <div id="partner-text-container" class="transition-all duration-300">
+                    <h3 id="partner-name" class="font-display text-white text-2xl"></h3>
+                    <p id="partner-type" class="font-mono text-base text-accent"></p>
+                </div>
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
 
     <section id="gabung-komunitas" class="section-wrapper">
         <div class="container mx-auto px-4 text-center">
@@ -518,7 +586,7 @@
                                 <p class="text-textDark mt-1">Pusat diskusi real-time, nobar online, dan event gaming eksklusif.</p>
                                 <p class="font-mono text-success mt-2">1,337 Members Online</p>
                             </div>
-                            <a href="#" class="hub-connect-btn font-display font-bold py-3 px-8 rounded-md text-background text-lg mt-4 md:mt-0">[ MASUK ]</a>
+                            <a href="https://discord.gg/3z9TEVGMt3" class="hub-connect-btn font-display font-bold py-3 px-8 rounded-md text-background text-lg mt-4 md:mt-0">[ MASUK ]</a>
                         </div>
                     </div>
                     <div id="whatsapp-content" class="hub-content hidden">
@@ -531,7 +599,7 @@
                                 <p class="text-textDark mt-1">Untuk koordinasi cepat, info mendadak, dan obrolan santai antar anggota.</p>
                                 <p class="font-mono text-success mt-2">Enkripsi End-to-End Aktif</p>
                             </div>
-                            <a href="#" class="hub-connect-btn font-display font-bold py-3 px-8 rounded-md text-background text-lg mt-4 md:mt-0">[ GABUNG ]</a>
+                            <a href="https://bit.ly/animenesiaid" class="hub-connect-btn font-display font-bold py-3 px-8 rounded-md text-background text-lg mt-4 md:mt-0">[ GABUNG ]</a>
                         </div>
                     </div>
                 </div>
@@ -565,8 +633,8 @@
             <div class="space-y-4">
                 <h4 class="font-display font-bold text-accent tracking-wider">KOMUNITAS</h4>
                 <ul class="space-y-2 text-textDark">
-                    <li><a href="#" class="hover:text-white transition-colors flex items-center justify-center sm:justify-start gap-2"><i class="fa-brands fa-discord"></i> Server Discord</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors flex items-center justify-center sm:justify-start gap-2"><i class="fa-brands fa-whatsapp"></i> Grup WhatsApp</a></li>
+                    <li><a href="https://discord.gg/3z9TEVGMt3" class="hover:text-white transition-colors flex items-center justify-center sm:justify-start gap-2"><i class="fa-brands fa-discord"></i> Server Discord</a></li>
+                    <li><a href="https://bit.ly/animenesiaid" class="hover:text-white transition-colors flex items-center justify-center sm:justify-start gap-2"><i class="fa-brands fa-whatsapp"></i> Grup WhatsApp</a></li>
                     <li><a href="#gabung-komunitas" class="hover:text-white transition-colors">Semua Kanal</a></li>
                 </ul>
             </div>
@@ -574,8 +642,8 @@
             <div class="space-y-4">
                 <h4 class="font-display font-bold text-accent tracking-wider">IKUTI KAMI</h4>
                 <div class="flex justify-center sm:justify-start gap-5 mt-2 text-2xl">
-                  <a href="#" class="text-textDark hover:text-white hover:scale-110 transition-all" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="#" class="text-textDark hover:text-white hover:scale-110 transition-all" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://instagram.com/animenesiaofficial" class="text-textDark hover:text-white hover:scale-110 transition-all" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-textDark hover:text-white hover:scale-110 transition-all" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
                   <a href="#" class="text-textDark hover:text-white hover:scale-110 transition-all" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
@@ -608,6 +676,88 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+
+    /* =================================================== */
+/* --- PARTNER AUTO-CYCLING LOGIC ---                  */
+/* Tambahkan ini di dalam DOMContentLoaded           */
+/* =================================================== */
+const partnerDisplayCard = document.getElementById('partner-display-card');
+const partnerLogo = document.getElementById('partner-logo');
+const partnerName = document.getElementById('partner-name');
+const partnerType = document.getElementById('partner-type');
+
+// DATABASE PARTNER: Cukup tambah/ubah data di sini
+const partners = [
+    { 
+        name: 'Comic Frontier', 
+        type: 'MEDIA PARTNER', 
+        logo: 'https://comifuro.net/wp-content/uploads/2020/11/logocf.png' 
+    },
+    { 
+        name: 'Kyou Hobby Shop', 
+        type: 'PAID COLLABORATION', 
+        logo: 'https://kyou.id/static/img/branding.png' 
+    },
+    { 
+        name: 'iQIYI', 
+        type: 'PAID COLLABORATION', 
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/IQiyi_logo.svg/640px-IQiyi_logo.svg.png'
+    },
+    { 
+        name: 'Scarlett', 
+        type: 'PAID COLLABORATION', 
+        logo: 'https://ingredio.id/wp-content/uploads/2022/07/Scarlett-logo-768x771.png'
+    },
+    { 
+        name: 'Chibicon', 
+        type: 'MEDIA PARTNER', 
+        logo: 'https://ugc.production.linktr.ee/HP4FlNKNQLO6g1stJpcT_hb37y58Rguz6XMsJ?io=true&size=avatar-v3_0'
+    },
+    { 
+        name: 'Gelar Jepang UI BY HIMAJA',
+        type: 'MEDIA PARTNER', 
+        logo: 'https://upload.wikimedia.org/wikipedia/id/thumb/0/0f/Makara_of_Universitas_Indonesia.svg/1024px-Makara_of_Universitas_Indonesia.svg.png'
+    },
+    { 
+        name: 'PT KIZARU KUSUMA CIPTA',
+        type: 'PAID COLLABORATION', 
+        logo: 'https://kizaruworldwide.com/wp-content/uploads/2025/04/logo-web-01.jpg'
+    },
+    { 
+        name: 'Helte Co., Ltd',
+        type: 'INTERNATIONAL PAID COLLAB', 
+        logo: 'https://play-lh.googleusercontent.com/W8a3wnAOCrzhwpVDWMciwEpKTKwbs4gH5lfqQWAQpbzwfKXTbcTIijC1q00-dZbRXQ=w3840-h2160-rw'
+    },
+];
+
+let currentPartnerIndex = 0;
+
+function updatePartnerInfo() {
+    // 1. Tambahkan class untuk memicu animasi fade-out
+    partnerDisplayCard.classList.add('partner-changing');
+    
+    // 2. Tunggu animasi fade-out selesai
+    setTimeout(() => {
+        // 3. Ganti kontennya
+        const currentPartner = partners[currentPartnerIndex];
+        partnerLogo.src = currentPartner.logo;
+        partnerLogo.alt = currentPartner.name;
+        partnerName.textContent = currentPartner.name;
+        partnerType.textContent = currentPartner.type;
+
+        // 4. Hapus class untuk memicu animasi fade-in
+        partnerDisplayCard.classList.remove('partner-changing');
+
+        // 5. Pindah ke indeks partner berikutnya untuk iterasi selanjutnya
+        currentPartnerIndex = (currentPartnerIndex + 1) % partners.length;
+    }, 400); // Harus cocok dengan durasi transisi di CSS
+}
+
+// Jalankan pertama kali saat halaman dimuat
+updatePartnerInfo();
+
+// Atur interval untuk pergantian otomatis setiap 4 detik
+setInterval(updatePartnerInfo, 3000);
 
 /* ============================================= */
 /* KODE JS - KINETIC TYPOGRAPHY LOADER SEQUENCE  */
